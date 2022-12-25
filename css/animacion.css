@@ -1,0 +1,170 @@
+
+ @keyframes tipsy {
+    0 {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+  
+.container {
+    width: 90%;
+    height: 555px;
+  }
+  
+  .container {
+    font-family: helvetica, arial, sans-serif;
+    /*background-color: #2e2e31;*/
+   background: url(../images/fiesta.png);
+  }
+  
+  .container a {
+    color: #fffbf1;
+    text-shadow: 0 17px 25px #031f09, 0 40px 60px #031f09;
+    font-size: 70px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -3px;
+    margin: 0;
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .container a:before,
+  .container a:after {
+    content: '';
+    padding: .9em .4em;
+    position: absolute;
+    left: 50%;
+    width: 120%;
+    top: 55%;
+    display: block;
+    border: 15px solid red;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+  }
+  
+  .container a:before {
+    border-color: #f21004 #f21004 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .container a:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #a92822 #a92822;
+    box-shadow: 20px 20px 20px rgba(3, 32, 8, 0.8);
+  }
+
+  .swing {
+    animation: swing ease-in-out 1s infinite alternate;
+  }
+    
+  @keyframes swing {
+    0% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .test {
+    height: 550px;
+    width: calc(100%/6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: width 0.75s;
+    background-color: grey;
+  }
+  
+  .test:hover, .test:focus {
+    width: 90%;
+  }
+  
+  .flex-row .test {
+    margin: 5px;
+  }
+  
+  .test h3 {
+    color: white;
+    font-weight: 600;
+    transform: rotate(-90deg);
+    font-size: 2em;
+     transition: transform 0.15s;
+  }
+  
+  .test:hover h3 {
+      transform: revert;
+  }
+  
+  .test span {
+    background-color: revert;
+    color: white;
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s;
+    opacity: 0;
+  }
+  
+  .test:hover span {
+    display: revert;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  @media only screen and (max-width: 900px) {
+  .flex-row {
+    display: flex;
+    flex-direction: column !important;
+    height: 700px;
+    width: 100%
+  }
+  
+  .test {
+    width: 100%;
+    height: calc(100%/6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: height 0.75s;
+    background-color: grey;
+  }
+  
+  .test:hover, .test:focus {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .flex-column .test {
+    margin: 5px;
+  }
+  
+  .test h3 {
+    color: white;
+    font-weight: 600;
+    font-size: 2em;
+    transition: transform 0.15s;
+    transform: revert;
+  }
+  
+  .test span {
+    background-color: revert;
+    color: white;
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s;
+    opacity: 0;
+  }
+  
+  .test:hover span {
+    visibility: visible;
+    opacity: 1;
+  }
+  }
+  
+  
+ 
