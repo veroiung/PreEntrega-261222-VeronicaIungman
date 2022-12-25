@@ -5,12 +5,7 @@
   margin: 0;
 	padding: 0;
 	border: 0;
-
 }
-
-/*body{
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}*/
 
 .center {
 	width: fit-content;
@@ -22,7 +17,6 @@
    font-weight: bolder;
    padding-bottom: 20px;
 }
-
 
 .parallax {
   background-image: url("../images/byiungman-01.jpg");
@@ -47,14 +41,12 @@
 }
 
 .parallax p{
-  
   font-family: "Open Sans", sans-serif;
   font: weight 40px;
   color: #fff;
   background-color: rgba(6, 6, 6, 0.5);
   text-align: center;
   margin: 0 auto;
-
 }
 
 .parallax-foto {
@@ -87,7 +79,6 @@
 }
 
 .parallax-diseno {
-
   background-image: url("../images/byiungman04.jpg");
   height: 300px;
   margin: auto;
@@ -117,7 +108,6 @@
 }
 
 .parallax-tinta {
-
   background-image: url("../images/byiungman03.jpg");
   height: 300px;
   margin: auto;
@@ -127,7 +117,6 @@
   background-size: cover;
 	padding: 50px 30px;
 	margin-bottom:50px;
-
 }
 
 .parallax-tinta h2{
@@ -201,7 +190,6 @@ iframe{
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: repeat(3, 200px);
 }
-
 
 .item{
   height: 400px;
@@ -396,111 +384,3 @@ textarea {
   widh: 100vw;
 }
 
-.swing {
-  animation: swing ease-in-out 1s infinite alternate;
-}
-  
-@keyframes swing {
-  0% { transform: rotate(5deg); }
-  100% { transform: rotate(-5deg); }
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.test {
-  height: 550px;
-  width: calc(100%/6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: width 0.75s;
-  background-color: grey;
-}
-
-.test:hover, .test:focus {
-  width: 90%;
-}
-
-.flex-row .test {
-  margin: 5px;
-}
-
-.test h3 {
-  color: white;
-  font-weight: 600;
-  transform: rotate(-90deg);
-  font-size: 2em;
-   transition: transform 0.15s;
-}
-
-.test:hover h3 {
-    transform: revert;
-}
-
-.test span {
-  background-color: revert;
-  color: white;
-  visibility: hidden;
-  transition: visibility 1s, opacity 1s;
-  opacity: 0;
-}
-
-.test:hover span {
-  display: revert;
-  visibility: visible;
-  opacity: 1;
-}
-
-@media only screen and (max-width: 900px) {
-.flex-row {
-  display: flex;
-  flex-direction: column !important;
-  height: 700px;
-  width: 100%
-}
-
-.test {
-  width: 100%;
-  height: calc(100%/6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  transition: height 0.75s;
-  background-color: grey;
-}
-
-.test:hover, .test:focus {
-  height: 100%;
-  width: 100%;
-}
-
-.flex-column .test {
-  margin: 5px;
-}
-
-.test h3 {
-  color: white;
-  font-weight: 600;
-  font-size: 2em;
-  transition: transform 0.15s;
-  transform: revert;
-}
-
-.test span {
-  background-color: revert;
-  color: white;
-  visibility: hidden;
-  transition: visibility 1s, opacity 1s;
-  opacity: 0;
-}
-
-.test:hover span {
-  visibility: visible;
-  opacity: 1;
-}
-}
